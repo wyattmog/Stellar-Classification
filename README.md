@@ -13,10 +13,12 @@ The classification is performed using photometric features including magnitude m
 
 ## Dataset
 
-The project uses a stellar classification dataset containing photometric measurements with the following key features:
+The project uses a local stellar classification dataset (`stellar_classification.csv`) containing photometric measurements with the following key features:
 - **u, g, r, i, z**: Photometric magnitudes in different filters
 - **redshift**: Cosmological redshift measurement
 - **class**: Target variable (GALAXY, QSO, STAR)
+
+The dataset is included in the repository for easy access and reproducibility.
 
 ### Data Preprocessing
 - Removal of unnecessary attributes (object IDs, coordinates, etc.)
@@ -75,7 +77,8 @@ The project implements and compares five different algorithms:
 Stellar-Classification/
 ├── README.md
 ├── Stellar_Classification_Report.ipynb    # Main analysis notebook
-└── requirements.txt                       # Python dependencies
+├── requirements.txt                       # Python dependencies
+└── stellar_classification.csv             # Dataset file
 ```
 
 ## Installation
@@ -99,7 +102,8 @@ jupyter notebook Stellar_Classification_Report.ipynb
 ```
 
 The notebook contains:
-- Data loading and preprocessing steps
+- Local data loading from CSV file
+- Data preprocessing steps
 - Exploratory data analysis with visualizations
 - Model training and hyperparameter optimization
 - Performance evaluation and comparison
